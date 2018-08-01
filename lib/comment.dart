@@ -66,11 +66,11 @@ class Comment extends StatelessWidget {
                 ),
               ),
             ),
-            margin: new EdgeInsets.only(left: depth * 16.0),
+            margin: new EdgeInsets.only(left: depth > 10 ? depth * 4.0 : depth * 8.0)
             decoration: new BoxDecoration(
               border: new Border(
                 left: new BorderSide(
-                  color: colorsByDepth[depth],
+                  color: colorsByDepth[depth] ?? Colors.teal[50],
                   width: 2.0,
                 ),
               ),
